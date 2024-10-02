@@ -72,4 +72,4 @@ async function linkanh(choice) {
   };
   const h = `${n}${options[choice]}`;
   return { p: axios, h };
-}
+                               }
