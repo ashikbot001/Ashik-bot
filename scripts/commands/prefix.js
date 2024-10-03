@@ -1,40 +1,52 @@
-const fs = require("fs");
-module.exports = {
-  config:{
-  name: "npx",
-        version: "1.0.1",
-        prefix: false,
-  permssion: 0,
-  credits: "farhan", 
-  description: "Fun",
-  category: "no prefix",
-  usages: "😒",
-        cooldowns: 5, 
-},
+module.exports.config = {
+  name: "prefix",
+  version: "1.0.0",
+  permission: 0,
+  credits: "Joy Ahmed",
+  prefix: true,
+  description: "guide",
+  category: "system",
+  usages: "",
+  cooldowns: 5,
+};
+module.exports.languages = {
+  "vi": {},
+  "en": {}
+};
 
-handleEvent: async function({ api, event, client, __GLOBAL }) {
-  var { threadID, messageID } = event;
-  const content = event.body ? event.body : '';
-  const body = content.toLowerCase();
-  const axios = require('axios')
-  const NAYAN = ['https://i.imgur.com/AzF8qu2.mp4','https://i.imgur.com/1bxxZCK.mp4','https://i.imgur.com/zF5Foig.mp4','https://i.imgur.com/jbUCtTa.mp4','https://i.imgur.com/J0sVuRc.mp4','https://i.imgur.com/CHMhxku.mp4','https://i.imgur.com/lEAyLIE.mp4','https://i.imgur.com/exfA2k9.mp4','https://i.imgur.com/ugGG2BY.mp4','https://i.imgur.com/dZEap0Z.mp4','https://i.imgur.com/xgpGdNe.mp4','https://i.imgur.com/LLucP15.mp4','https://i.imgur.com/DEBRSER.mp4','https://i.imgur.com/0HNqXfX.mp4','https://i.imgur.com/lEAyLIE.mp4','https://i.imgur.com/iPibbD9.mp4','https://i.imgur.com/p4BHIJE.mp4','https://i.imgur.com/qh295t5.mp4','https://i.imgur.com/c98dIlK.mp4','https://i.imgur.com/5ty0RNA.mp4','https://i.imgur.com/W2fd3e5.mp4','https://i.imgur.com/OS2lRVW.mp4','https://i.imgur.com/OS2lRVW.mp4','https://i.imgur.com/OS2lRVW.mp4','https://i.imgur.com/J524CfA.mp4','https://i.imgur.com/J524CfA.mp4','https://i.imgur.com/OHn0L1g.mp4','https://i.imgur.com/OHn0L1g.mp4','https://i.imgur.com/OHn0L1g.mp4','https://i.imgur.com/OHn0L1g.mp4','https://i.imgur.com/OHn0L1g.mp4','https://i.imgur.com/OHn0L1g.mp4','https://i.imgur.com/dshmNdc.mp4 ','https://i.imgur.com/0785PGJ.mp4','https://i.imgur.com/J59Hl1t.mp4','https://i.imgur.com/dshmNdc.mp4','https://i.imgur.com/SoVP1Qe.mp4','https://i.imgur.com/G8uYNxl.mp4','https://i.imgur.com/iutOxsG.mp4','https://i.imgur.com/eCF9cBd.mp4','https://i.imgur.com/HmHXjyJ.mp4','https://i.imgur.com/iNCRwUz.mp4','https://i.imgur.com/iNCRwUz.mp4','https://i.imgur.com/Opeg9MG.mp4','https://i.imgur.com/7dqTUvv.mp4','https://i.imgur.com/6nvzJ1q.mp4','https://i.imgur.com/vznF0YY.mp4','https://i.imgur.com/aKMiLTo.mp4','https://i.imgur.com/cy4w6Tz.mp4','https://i.imgur.com/iyNLH0u.mp4','https://i.imgur.com/FCwSA0x.mp4','https://i.imgur.com/G6HsY3Z.mp4','https://i.imgur.com/NT3LT2w.mp4','https://i.imgur.com/9xiSW5o.mp4','https://i.imgur.com/DmC9av3.mp4','https://i.imgur.com/tuaCyjp.mp4','https://i.imgur.com/TQIejDd.mp4','https://i.imgur.com/vywuYQ8.mp4','https://i.imgur.com/vywuYQ8.mp4','https://i.imgur.com/m7zvwaq.mp4','https://i.imgur.com/Ev3TJKG.mp4','https://i.imgur.com/Ev3TJKG.mp4','https://i.imgur.com/Ev3TJKG.mp4','https://i.imgur.com/XItdI9A.mp4','https://i.imgur.com/GbOiBxK.mp4','https://i.imgur.com/GbOiBxK.mp4','https://i.imgur.com/TtiTM5H.mp4','https://i.imgur.com/uJfRVHE.mp4','https://i.imgur.com/uJfRVHE.mp4','https://i.imgur.com/8xMGbf5.mp4','https://i.imgur.com/cC0OxQI.mp4','https://i.imgur.com/cC0OxQI.mp4','https://i.imgur.com/Eclw9qK.mp4','https://i.imgur.com/u8RVSk4.mp4','https://i.imgur.com/u8RVSk4.mp4','https://i.imgur.com/u8RVSk4.mp4','https://i.imgur.com/u8RVSk4.mp4','https://i.imgur.com/mHa55LQ.mp4','https://i.imgur.com/mHa55LQ.mp4','https://i.imgur.com/VwDPT3u.mp4','https://i.imgur.com/VwDPT3u.mp4','https://i.imgur.com/qEfCFwj.mp4','https://i.imgur.com/qEfCFwj.mp4','https://i.imgur.com/We18rbB.mp4','https://i.imgur.com/wK9pmGn.mp4','https://i.imgur.com/BeiUY8F.mp4','https://i.imgur.com/6YH1wQL.mp4','https://i.imgur.com/i3VQpLm.mp4','https://i.imgur.com/wXIBgQg.mp4','https://i.imgur.com/rDNtrkr.mp4','https://i.imgur.com/GFY5fvj.mp4','https://i.imgur.com/C9ap29j.mp4']
-    var rndm = NAYAN[Math.floor(Math.random() * NAYAN.length)];
-const media = (
-    await axios.get(
-      `${rndm}`,
-      { responseType: 'stream' }
-    )
-  ).data;
-
-  if (body.indexOf("😗")==0 || body.indexOf("🫣")==0 || body.indexOf("🌺")==0 || body.indexOf("😟")==0 || body.indexOf("🧐")==0 || body.indexOf("🫶")==0 || body.indexOf("💘")==0 || body.indexOf("💕")==0 || body.indexOf("💖")==0 || body.indexOf("😒")==0 || body.indexOf("😩")==0 || body.indexOf("😯")==0 || body.indexOf("😫")==0 || body.indexOf("🤡")==0 || body.indexOf("🙈")==0 || body.indexOf("🙀")==0 || body.indexOf("🖤")==0 || body.indexOf("💥")==0 || body.indexOf("👏")==0 || body.indexOf("🤝")==0 || body.indexOf("🤷‍♂️")==0  || body.indexOf("🫡")==0 || body.indexOf("🤐")==0 || body.indexOf("🤨")==0 || body.indexOf("😐")==0 || body.indexOf("😶")==0 || body.indexOf("😑")==0 || body.indexOf("😮‍💨")==0 || body.indexOf("🫥")==0 || body.indexOf("🥴")==0 || body.indexOf("😵")==0 || body.indexOf("🤗")==0 || body.indexOf("🤷‍♀️")==0 || body.indexOf("🤕")==0 || body.indexOf("😎")==0 || body.indexOf("😦")==0 || body.indexOf("😓")==0 || body.indexOf("😖")==0 || body.indexOf("😈")==0 || body.indexOf("👿")==0 || body.indexOf("😻")==0 || body.indexOf("💔")==0 || body.indexOf("🧡")==0 || body.indexOf("🫦")==0 || body.indexOf("🤦‍♂️")==0 || body.indexOf("🤦‍♀️")==0 || body.indexOf("🙆‍♂️")==0 || body.indexOf("🙆‍♀️")==0 || body.indexOf("💏")==0 || body.indexOf("🗣️")==0 || body.indexOf("🫂")==0 || body.indexOf("🐒")==0 || body.indexOf("🐸")==0 || body.indexOf("🏵️")==0 || body.indexOf("🌹")==0 || body.indexOf("🌷")==0 || body.indexOf("🍁")==0 || body.indexOf("🌝")==0 || body.indexOf("⭐")==0 || body.indexOf("💌")==0 || body.indexOf("😞")==0 || body.indexOf("☹️")==0 || body.indexOf("😕")==0 || body.indexOf("😏")==0 || body.indexOf("🤨")==0 || body.indexOf("😔")==0 || body.indexOf("😇")==0 || body.indexOf("🤫")==0) {
-    var msg = {
-        body: "•⎯͢⎯⃝🙂_আমরা যাদেরকে ভালোবাসি তারা আমাদের জীবন থেকে হারিয়ে যাবেই..! 🙂\n       _এটাই প্রকৃতির নিয়ম⎯͢⎯⃝🤍🫶🌺!-:))",
-        attachment: media
-      }
-      api.sendMessage( msg, threadID, messageID);
-    api.setMessageReaction("🖤", event.messageID, (err) => {}, true)
-    }
-  },
-  start: function({ nayan }) {
+function random(arr) {
+var rd = arr[Math.floor(Math.random() * arr.length)];
+    return rd;
+        };
+module.exports.handleEvent = async function ({ api, event, Threads }) {
+  const axios = require("axios")
+  const picture = (await axios.get(`https://i.imgur.com/TQeipJV.jpeg`, { responseType: "stream"})).data
+      const moment = require("moment-timezone");
+var gio = moment.tz("Asia/Dhaka").format("hh:mm:ss || D/MM/YYYY");
+  var thu =
+moment.tz('Asia/Dhaka').format('dddd');
+  if (thu == 'Sunday') thu = 'রবিবার'
+  if (thu == 'Monday') thu = 'সোমবার'
+  if (thu == 'Tuesday') thu = 'মঙ্গলবার'
+  if (thu == 'Wednesday') thu = 'বুধবার'
+  if (thu == "Thursday") thu = 'বৃহস্পতিবার'
+  if (thu == 'Friday') thu = 'শুক্রবার'
+  if (thu == 'Saturday') thu = 'শনিবার'
+  var { threadID, messageID, body } = event,{ PREFIX } = global.config;
+  let threadSetting = global.data.threadData.get(threadID) || {};
+  let prefix = threadSetting.PREFIX || PREFIX;
+  const icon = [""];
+  if (body.toLowerCase() == "prefix" || (body.toLowerCase() == "Prefix") ||  (body.toLowerCase() == "PREFIX") || (body.toLowerCase() == "PreFix")) {
+       api.sendMessage({body: `💐 ====『 𝗣𝗥𝗘𝗙𝗜𝗫 』==== 💐\n━━━━━━━━━━━━━━━━━━━\n[⏰] → 𝐃𝐚𝐭𝐚 𝐀𝐧𝐝 𝐓𝐢𝐦𝐞: ${gio} (${thu})\n[❤️] → 𝐁𝐨𝐭 𝐏𝐫𝐞𝐟𝐢𝐱: [ ${global.config.PREFIX} ]\n━━━━━━━━━━━━━━━━━━━\n[💥] → 𝐁𝐨𝐭 𝐡𝐚𝐬 𝐚 𝐩𝐨𝐬𝐬𝐢𝐛𝐥𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 ${client.commands.size} \n[👥] → 𝐓𝐨𝐭𝐚𝐥 𝐁𝐨𝐭 𝐔𝐬𝐞𝐫𝐬: ${global.data.allUserID.length}\n[🏘️] → 𝐓𝐨𝐭𝐚𝐥 𝐆𝐫𝐨𝐮𝐩: ${global.data.allThreadID.length}\n━━━━━━━━━━━━━━━━━━━\n[👉] → 𝐓𝐡𝐢𝐬 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐓𝐨 𝐒𝐞𝐞 𝐂𝐨𝐦𝐦𝐨𝐧𝐥𝐲 𝐔𝐬𝐞𝐝 ${global.config.PREFIX} 𝐇𝐞𝐥𝐩.`, attachment: (await axios.get((await axios.get(`https://imran-api.onrender.com/video/crush`)).data.data, {
+                    responseType: 'stream'
+                })).data}, event.threadID, (err, info) => {
+    global.client.handleReaction.push({
+      name: this.config.name, 
+      messageID: info.messageID,
+      author: event.senderID,
+    })
+      },event.messageID);
   }
-}
+ }
+//ko api thì attachment: (picture)}, event.threadID, event.messageID);
+module.exports.run = async ({ api, event, args, Threads }) => {}
