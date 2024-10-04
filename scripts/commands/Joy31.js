@@ -16,7 +16,7 @@ handleEvent: function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
   const content = event.body ? event.body : '';
   const body = content.toLowerCase();
-	if (body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf("🥰")==0) {
+	if (body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf(" ")==0 || body.indexOf("😭")==0) {
 		var msg = {
 				body: "💚🌺𝐈𝐭𝐬 𝐦𝐲 𝐁𝐞𝐬𝐭 𝐅𝐞𝐞𝐥𝐢𝐧𝐠𝐬 ☺️ლ\n🌼খুব!বেশি!নয়!আমি!\nঅল্পতেই!অনেক খুশি💚🌻\n༅🙂🌸আর প্রকৃত ভাবে আমি \nআপনাকে অনেকভালোবাসি🌺🖤☺️🥀🌹💥\n\nBOSS~ASHIK",
 				attachment: fs.createReadStream(__dirname + `/Joy/joy404.mp4`)
