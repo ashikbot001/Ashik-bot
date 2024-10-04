@@ -8,7 +8,7 @@
   "approval": false,
   "saveState": true,
   "BOTNAME": "উ্ঁফ্ঁ বা্ঁবু্ঁ উ্ঁম্মা্ঁ-bot",
-  "PREFIX": ".",
+  "PREFIX": "/",
   "OPERATOR": [
     "100095089282395",
     "100"
