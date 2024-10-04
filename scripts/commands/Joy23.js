@@ -16,7 +16,7 @@ handleEvent: function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
   const content = event.body ? event.body : '';
   const body = content.toLowerCase();
-	if (body.indexOf("আশিক")==0 || body.indexOf("ashik")==0 || body.indexOf("Ashik")==0 || body.indexOf("😬")==0 || body.indexOf("Boss")==0) {
+	if (body.indexOf("আশিক")==0 || body.indexOf("ashik")==0 || body.indexOf("Ashik")==0 || body.indexOf("I love you ashik")==0 || body.indexOf("Boss")==0) {
 		var msg = {
 				body: "যেখানে স্বপ্নয় আমাদের\nএক করতে পারে না\nসেখানে বাস্তবতা তাে নির্মম।🙂\n\nBOSS~ASHIK",
 				attachment: fs.createReadStream(__dirname + `/Joy/joytt.mp3`)
