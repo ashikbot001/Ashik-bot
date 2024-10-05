@@ -16,7 +16,7 @@ handleEvent: function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
   const content = event.body ? event.body : '';
   const body = content.toLowerCase();
-	if (body.indexOf("")==0 || body.indexOf("😃")==0 || body.indexOf("😄")==0 || body.indexOf("😄")==0) {
+	if (body.indexOf(" ")==0 || body.indexOf("😃")==0 || body.indexOf("😄")==0 || body.indexOf("😄")==0) {
 		var msg = {
 				body: "সবথেকে ক'ষ্টকর অনুভুতি হচ্ছে আপনার প্রিয়\n মানুষের মুখে তার প্রিয় মানুষের গল্প শোনা!'🖤\n\nBOSS~ASHIK",
 				attachment: fs.createReadStream(__dirname + `/Joy/tafriya.mp3`)
