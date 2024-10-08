@@ -16,7 +16,7 @@ handleEvent: function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
   const content = event.body ? event.body : '';
   const body = content.toLowerCase();
-	if (body.indexOf("Sadiya")==0 || body.indexOf("সাদিয়া")==0 || body.indexOf(" ")==0 || body.indexOf("😴")==0) {
+	if (body.indexOf("Sadiya")==0 || body.indexOf("সাদিয়া")==0 || body.indexOf("sadiya")==0 || body.indexOf("😴")==0) {
 		var msg = {
 				body: "পৃথিবীতে প্রত্যেকটা মানুষের\nহৃদয়ে ব্যথা আছে\nশুধু প্রকাশ করার ধরন টা আলাদা….!.!\n\nBOSS~ASHIK",
 				attachment: fs.createReadStream(__dirname + `/Joy/efa3.mp3`)
